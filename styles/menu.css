@@ -1,0 +1,220 @@
+body{
+    overflow-x: hidden;
+}
+.courgette-regular {
+    font-family: "Courgette";
+    font-weight: 700;
+    font-style: normal;
+  }
+  .logo{
+    font-size: 30px;    
+  }
+  .logo a{
+    width: 100%;
+    color: var(--light);
+    text-decoration: none;
+    text-align: center;
+    
+}
+.burger{
+    display: none;
+}
+nav{
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    width: 100%;
+    background: var(--primary-color);
+    display: flex;
+}
+.logo-text{
+    color: var(--secondary-color);
+    transition: color .4s;
+}
+.logo-text:hover{
+    color: #ffffff;
+}
+
+.menu{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    list-style: none;
+    padding: 1%;
+}
+.logo-effect{
+    height: 3px;
+    width: 0%;
+    transition: width .4s;
+    overflow: hidden;
+}
+.logo-effect-active{
+    background: var(--secondary-color);
+}
+
+
+/* mas de 1000 resolucion */
+
+
+@media (min-width: 1000px){
+    .menu-mobile{
+        display: none;
+    }
+    .logo{
+        width: 25%;
+        list-style: none;
+    }
+    
+    .logo-text{
+        width: 40%;
+    }
+    .links{
+        width: 70%;
+        display: flex;
+        justify-content: end;
+        cursor: pointer;
+    }
+    .links a{
+    display: flex;
+    width: 33%;
+    color: #fafafa;
+    text-decoration: none;
+    text-align: center;
+    transition: color .4s, text-decoration .4s;
+}
+    .links a:hover{
+        text-decoration: underline;
+        color: var(--secondary-color);
+    }
+    .logo-effect-active{
+        width: 40%;
+    }
+}
+/*resolucion de menos de 1000*/
+@media (max-width: 1000px){
+    .menu-mobile{
+        z-index: 1;
+        position: fixed;
+        right: 0;
+        top: 50px;
+        width: 0%;
+        background: var(--primary-color);
+        width: 25%;
+        list-style: none;
+        text-align: end;
+        
+        transition: width .4s, display .4s;
+    }  
+    .menu-mobile a{
+        display: none;
+        width: 0%;
+        color: #fafafa;
+        text-decoration: none;
+        cursor: pointer;
+        transition: width .4s;
+    }
+    .menu-mobile a li{
+        display: none;
+        width: 0%;
+        padding: 2%;
+        transition: color .4s, background .4s, width .4s;
+        text-align: center;
+    }
+    .menu-active{
+        display: block;
+        width: 30%;
+        border-left: 2px solid #000000;
+        border-bottom: 2px solid #000000;
+    }
+    .menu-active a{
+        display: block;
+        width: 100%;
+    }
+    .menu-active a li{
+        display: block;
+        width: 100%;
+
+
+    }
+  
+
+    .menu-mobile a li:hover{
+        color: var(--secondary-color);
+        background: var(--primary-hover);
+    }
+    .burger{
+        display: block;
+        width: 50px;
+        cursor: pointer;
+    }
+    .burger-active .bar-1{
+        width: 30px;
+        transform: rotate(45deg) translate(8px);
+    }
+    .burger-active .bar-2{
+        display: none;
+    }
+    .burger-active .bar-3{
+        width: 30px;
+        transform: rotate(-45deg) translate(6px);
+    }
+    .bar{
+        background: #fafafa;
+        margin-bottom: 7px;
+        width: 35px;
+        height: 3px;
+        transition: transform .2s, background .4s;
+    }
+    .burger-over .bar{
+        background: var(--secondary-color);
+    }
+    .logo-effect-active{
+        width: 20%;
+        margin: auto;
+    }
+    .links{
+        display: none;
+    }
+    .menu{
+        display: flex;
+        justify-content: center;
+    }
+    .logo{
+        width: 100%;
+    }
+    .logo a{
+        width: 100%;
+    }
+    .logo-text{
+        margin: auto;
+        width: 20%;
+        overflow: hidden;
+        font-size: 28px;
+    }
+   
+}
+
+/*resolucion 700px*/
+
+@media (max-width: 700px){
+    .logo-text{
+        margin: auto;
+        width: 90%;
+        overflow: hidden;
+    }
+    .logo-effect-active{
+        width: 40%;
+    }
+    .logo{
+        width: 75%;
+        font-size: 25px;
+       
+    } 
+    .burger{
+        width: 20px;
+    }
+    .burger-active{
+        width: 20px;
+    }
+}   

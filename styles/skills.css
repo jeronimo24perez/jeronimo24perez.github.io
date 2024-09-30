@@ -1,0 +1,134 @@
+
+.skills{
+    background: var(--primary-color);
+    color: var(--light);
+    padding: 2%;
+}
+.grid-skills{
+    margin-top: 20px;
+    display: grid;
+    grid-template: repeat(3, 1fr);
+    grid-auto-rows: minmax(10px, 100px);
+    text-align: center;
+}
+
+.html{
+    grid-column: 1;
+}
+
+.css{
+    grid-column: 2;
+}
+.img-skills{
+    border: 1px solid var(--light);
+    border-radius: 5px;
+    width: 15%;
+    margin: auto;
+    padding: 1%;
+    transition: transform .4s, border-color .4s, background .4s;
+}
+.img-skills:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+    border-color: var(--secondary-color);
+    background: var(--primary-hover);
+}
+.grid-content img{
+    max-width: 60px;
+
+}
+
+
+.title-skills{
+    font-size: 26px;
+    font-weight: 900;
+    text-align: center;
+}
+.py{
+    grid-row: 4;
+    grid-column: 2;
+}
+@media (min-width: 1200px){
+    .js{
+        grid-column: 3;
+    }
+    .grid-skills{
+        grid-auto-rows: minmax(40px, 120px);
+        }
+        .img-skills{
+       
+            width: 20%;
+    
+        }
+        .grid-content img{
+            max-width: 85px;
+        }     
+}
+@media (max-width: 1200px){
+    .js{
+        grid-column: 3;
+    }
+    .grid-skills{
+    grid-auto-rows: minmax(40px, 120px);
+    }
+    .img-skills{
+   
+        width: 80%;
+
+    }
+    .grid-content img{
+        max-width: 90px;
+    }
+}
+@media (max-width: 900px){
+    .js{
+        grid-row: 2;
+        grid-column: 2;
+    }
+    .img-skills{
+   
+        width: 70%;
+
+    }
+    .grid-skills{
+    grid-template: repeat(2, 1fr);
+    grid-auto-rows: minmax(40px, 120px);
+
+    }
+    .grid-content img{
+        max-width: 80px;
+    }
+    .html{
+        grid-column: 1;
+    }
+    .css{
+        grid-column: 2;
+    }
+    
+}
+@media (max-width: 325px){
+    .js{
+        grid-row: 2;
+        grid-column: 2;
+    }
+    .img-skills{
+   
+        width: 70%;
+
+    }
+    .grid-skills{
+    grid-template: repeat(2, 1fr);
+    grid-auto-rows: minmax(40px, 120px);
+
+    }
+    .grid-content img{
+        max-width: 80px;
+    }
+    .html{
+        grid-column: 1;
+    }
+    .css{
+        grid-column: 2;
+    }
+    
+}

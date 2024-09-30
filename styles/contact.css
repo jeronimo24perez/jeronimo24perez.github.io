@@ -1,0 +1,183 @@
+@import url('./menu.css');
+
+body{
+    background: var(--dark);
+}
+.links-social{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.social-box{
+    border: 2px solid var(--primary-hover);
+    border-radius: 25px;
+    margin: 6px;
+    width: 200px;
+    height: 200px;
+    transition: width .4s, background .4s;
+}
+.social-box:hover{
+    cursor: pointer;
+    width: 250px;
+}
+.wp{
+    background: #32D951;
+}
+.wp:hover{
+    background: #0d8523;
+}
+.gm{
+    background: var(--light);
+}
+.gm:hover{
+    background: #7e7e7e;
+}
+.social-box img{ 
+    max-width: 200px;
+}
+.gmail-custom{
+    display: none;
+}
+.gm-active{
+    display: block;
+}
+.hide-gm{
+    transition: transform .4s, background .4s;
+    padding: 1%;
+    display: flex;
+    top:    2%;
+    cursor: pointer;
+    position: absolute;
+    width: 45px;
+    height: 25px;
+}
+.hide-gm:hover{
+    transform: scale(1.1);
+}
+.hide-gm img{
+    max-width: 32px;
+    max-height: 32px;
+}
+@media(min-width: 1200px){
+    .hide-gm{
+    left: 90%;
+
+    }
+    .gmail-custom{
+        position: absolute;
+        border-radius: 10px;
+        left: 30%;
+        top: 30%;
+        padding: 2%;
+        text-align: center;
+        font-size: 23px;
+        line-height: 250px;
+        z-index: 1;
+        width: 40%;
+        height: 40%;
+        border: 2px solid var(--secondary-color);
+        background: #f7f7f7;
+    
+    }
+}
+@media(max-width: 1200px){
+    .hide-gm{
+        left: 90%;
+    
+        }
+    .gmail-custom{
+        position: absolute;
+        border-radius: 10px;
+        left: 30%;
+        top: 30%;
+        padding: 2%;
+        text-align: center;
+        font-size: 17px;
+        line-height: 220px;
+        z-index: 1;
+        width: 40%;
+        height: 40%;
+        border: 2px solid var(--secondary-color);
+        background: #f7f7f7;
+    
+    }
+}
+@media (max-width: 864px){
+    .hide-gm{
+        left: 80%;
+    }
+}
+@media(max-width: 749px){
+    .social-box{
+        width: 100px;
+        height: 100px;
+    }
+    .social-box img{
+        max-width: 100px;
+    }
+    .social-box:hover{
+        width: 150px;
+    }
+    .gmail-custom{
+        position: absolute;
+        border-radius: 10px;
+        left: 30%;
+        top: 30%;
+        padding: 2%;
+        text-align: center;
+        font-size: 17px;
+        line-height: 100px;
+        z-index: 1;
+        width: 40%;
+        height: 40%;
+        border: 2px solid var(--secondary-color);
+        background: #f7f7f7;
+    
+    }
+}
+
+@media(max-width: 500px){
+    .gmail-custom{
+        position: absolute;
+        border-radius: 10px;
+        left: 18%;
+        top: 30%;
+        padding: 2%;
+        text-align: center;
+        font-size: 17px;
+        line-height: 50px;
+        z-index: 1;
+        width: 60%;
+        height: 40%;
+        border: 2px solid var(--secondary-color);
+        background: #f7f7f7;
+    
+    }
+}
+
+@media(max-width: 400px){
+    .gmail-custom{
+        padding-top: 10%;
+        position: absolute;
+        border-radius: 10px;
+        left: 2%;
+        top: 30%;
+        padding: 2%;
+        text-align: center;
+        font-size: 17px;
+        line-height: 50px;
+        z-index: 1;
+        width: 90%;
+        height: 40%;
+        border: 2px solid var(--secondary-color);
+        background: #f7f7f7;
+    
+    }
+}
+@media (max-width: 390px){
+    .gmail-custom{
+       padding-top: 20%;
+    }
+
+}
