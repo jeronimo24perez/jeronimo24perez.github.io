@@ -26,7 +26,7 @@ burger[0].addEventListener('mouseout', ()=>{
 
 let filterBar = document.getElementsByClassName('filter-bar')
 let filterSelect = document.getElementsByClassName('filter-select')
-let filterOption = document.getElementsByClassName('filter-option')
+let filterOption = document.querySelectorAll('.filter-option')
 let project = document.querySelectorAll('.project')
 let projects = [{
     'project': 1,
@@ -89,7 +89,12 @@ function filter(val, classname) {
           });
     }
 }
-filterSelect[0]?.addEventListener('click', ()=>{
+filterOption.forEach(e => {
+    e.addEventListener('click', ()=>{
+        console.log(e)
+    })
+})
+filterSelect[0]?.addEventListener('change', ()=>{
    
    filter( 'all')
    filter( 'html', 'html-f')
