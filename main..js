@@ -94,7 +94,7 @@ filterOption.forEach(e => {
         console.log(e)
     })
 })
-filterSelect[0]?.addEventListener('change', ()=>{
+filterSelect[0]?.addEventListener('input', ()=>{
    
    filter( 'all')
    filter( 'html', 'html-f')
