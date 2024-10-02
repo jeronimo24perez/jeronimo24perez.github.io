@@ -42,7 +42,7 @@ const filterClasses = {
 
 filterSelect.addEventListener('change', () => {
     const selectedFilter = filterSelect.value;
-    let activeCount = 0; // Contador de proyectos activos
+    let activeCount = 0; 
 
     projects.forEach(project => {
         const matches = selectedFilter === 'all' || project.classList.contains(filterClasses[selectedFilter]);
@@ -52,10 +52,12 @@ filterSelect.addEventListener('change', () => {
 
     const projectGrid = document.querySelector('.project-grid');
     
-    // Si solo hay un proyecto activo, se centra
+    
     if (activeCount === 1) {
         projectGrid.classList.add('project-grid-1') 
         
+    }else{
+        projectGrid.classList.remove('project-grid-1') 
     }
 
     window.scrollTo({ top: 2000, left: 0, behavior: "smooth" });
